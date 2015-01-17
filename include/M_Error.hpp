@@ -4,7 +4,7 @@
 # include <stdarg.h>
 # include <iostream>
 
-# define M_ERROR(type, ret, fmt, args...)	mf_error<type>(ret, __func__, __FILE__, __LINE__, fmt, ##args)
+# define M_ERROR(ret, fmt, args...)	mf_error<typeof(ret)>(ret, __func__, __FILE__, __LINE__, fmt, ##args)
 
 template <typename T>
 T   mf_error(T ret, const char *func, const char *file, const int line, const char *fmt, ...) {
