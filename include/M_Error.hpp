@@ -7,7 +7,7 @@
 # include <sstream>
 # include <string>
 
-# define M_ERROR(ret, fmt, args...)	mf_error<typeof(ret)>(ret, __func__, __FILE__, __LINE__, fmt, ##args)
+# define M_ERROR(ret, fmt, args...)	mf_error(ret, __func__, __FILE__, __LINE__, fmt, ##args)
 
 template <typename T>
 T
